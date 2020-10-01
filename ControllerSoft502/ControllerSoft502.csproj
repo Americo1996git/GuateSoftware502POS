@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D67F47A5-0224-4088-A5DD-7461502FC11E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControllerSoft502</RootNamespace>
+    <AssemblyName>ControllerSoft502</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="ControllerAnulaciones.cs" />
+    <Compile Include="ControllerBancos.cs" />
+    <Compile Include="ControllerBodega.cs" />
+    <Compile Include="ControllerBusquarSereis.cs" />
+    <Compile Include="ControllerCapturaPedido.cs" />
+    <Compile Include="ControllerCierre.cs" />
+    <Compile Include="ControllerCliente.cs" />
+    <Compile Include="ControllerClientesMorosos.cs" />
+    <Compile Include="ControllerDocumentosInventario.cs" />
+    <Compile Include="ControllerGastos.cs" />
+    <Compile Include="ControllerGenerarOrdenCompra.cs" />
+    <Compile Include="ControllerIngreso.cs" />
+    <Compile Include="ControllerIngresoTrasladoBodega.cs" />
+    <Compile Include="ControllerIngresoTrasladoTienda.cs" />
+    <Compile Include="ControllerLinea.cs" />
+    <Compile Include="ControllerMarca.cs" />
+    <Compile Include="ControllerMostrar.cs" />
+    <Compile Include="ControllerNotificacion.cs" />
+    <Compile Include="ControllerPagoCredito.cs" />
+    <Compile Include="ControllerProducto.cs" />
+    <Compile Include="ControllerProductosEnBodega.cs" />
+    <Compile Include="ControllerProveedor.cs" />
+    <Compile Include="ControllerReporteMaestroProductos.cs" />
+    <Compile Include="ControllerMovimientoDinero.cs" />
+    <Compile Include="ControllerSalidas.cs" />
+    <Compile Include="ControllerSubLinea.cs" />
+    <Compile Include="ControllerSubTrasladoTiendas.cs" />
+    <Compile Include="ControllerTraslado.cs" />
+    <Compile Include="ControllerTrasladoBodegas.cs" />
+    <Compile Include="ControllerTrasladoTiedas.cs" />
+    <Compile Include="ControllerVentas.cs" />
+    <Compile Include="ControllerVerificacion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MODELOS502\MODELOS502.csproj">
+      <Project>{1b825601-342b-425b-ada9-8ec14855df1c}</Project>
+      <Name>MODELOS502</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelSoft502\ModelSoft502.csproj">
+      <Project>{7c836c0e-467b-461e-a0bf-76ed2b8e0e77}</Project>
+      <Name>ModelSoft502</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
